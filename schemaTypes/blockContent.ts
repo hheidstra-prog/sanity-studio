@@ -1,5 +1,6 @@
 import {defineType, defineArrayMember} from 'sanity'
 
+
 /**
  * This is the schema definition for the rich text fields used for
  * for this blog studio. When you import it in schemas.js it can be
@@ -62,6 +63,26 @@ export default defineType({
     defineArrayMember({
       type: 'image',
       options: {hotspot: true},
+      fields: [
+        {
+          name: 'alt',
+          type: 'string',
+          title: 'Alternative Text',
+        },
+        {
+          name: 'height',
+          type: 'number',
+          title: 'Height',
+        },
+        {
+          name: 'width',
+          type: 'number',
+          title: 'Width',
+        },
+      ],
     }),
+    defineArrayMember({
+      type: 'code',
+    })
   ],
 })
