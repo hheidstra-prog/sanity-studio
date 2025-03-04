@@ -6,6 +6,12 @@ export default defineType({
   type: 'document',
   fields: [
     defineField({
+      name: "language",
+      title: "Language",
+      type: "string",
+      readOnly: true, // Set automatically by the localization plugin
+    }),       
+    defineField({
       name: 'name',
       title: 'Name',
       type: 'string',
